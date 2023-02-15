@@ -45,7 +45,7 @@ class Validator
      * @param string $prefix
      * @return static
      */
-    public static function messages(string $messages): static
+    public static function messages(array $messages): static
     {
         static::$messages = $messages;
 
