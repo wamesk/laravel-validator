@@ -41,8 +41,7 @@ class Validator
     }
 
     /**
-     * @param string $code
-     * @param string $prefix
+     * @param array $messages
      * @return static
      */
     public static function messages(array $messages): static
