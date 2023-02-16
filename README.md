@@ -15,6 +15,7 @@
     * [Exists rule](#exists-rule)
     * [IsInteger rule](#isinteger-rule)
     * [IsString rule](#isstring-rule)
+    * [IsArray rule](#isarray-rule)
 <!-- TOC -->
 
 ## Installation
