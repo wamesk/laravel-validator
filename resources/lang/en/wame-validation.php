@@ -5,4 +5,14 @@ return [
 
     "exists" => "Entity with this :attribute doesn't exist",
     "soft_deleted" => "Entity with this :attribute was deleted",
+
+    "integer" => "The :attribute must be an integer.",
+
+    "min" => [
+        "numeric" => "The :attribute must be at least :min.",
+    ],
+
+    "max" => [
+        "numeric" => "The :attribute must not be greater than :max.",
+    ],
 ];

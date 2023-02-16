@@ -18,6 +18,13 @@
             "Wame\\Validator\\": "src/"
         }
     },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Wame\\Validator\\LaravelValidatorServiceProvider"
+            ]
+        }
+    },
     "minimum-stability": "dev",
     "prefer-stable": true
 }
