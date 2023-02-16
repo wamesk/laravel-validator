@@ -7,7 +7,7 @@ use Illuminate\Contracts\Validation\DataAwareRule;
 use Illuminate\Contracts\Validation\ValidatorAwareRule;
 use Illuminate\Support\Facades\DB;
 
-class Integer implements InvokableRule
+class IsInteger implements InvokableRule
 {
     public function __construct(protected $min = null, protected $max = null) {}
 

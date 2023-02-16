@@ -13,6 +13,8 @@
     * [Status Code function](#status-code-function)
   * [Rules](#rules)
     * [Exists rule](#exists-rule)
+    * [IsInteger rule](#isinteger-rule)
+    * [IsString rule](#isstring-rule)
 <!-- TOC -->
 
 ## Installation
@@ -170,4 +172,22 @@ You can pass second *(optional)* parameter *column name*.
 
 ```php
 new \Wame\Validator\Rules\Exists(User::class, 'id')
+```
+
+### IsInteger rule
+
+This rule validates if attribute is integer.
+You can pass additional data (min, max) in construct to create range of acceptable integers.
+
+```php
+new \Wame\Validator\Rules\IsInteger(min: 10, max: 100)
+```
+
+### IsString rule
+
+This rule validates if attribute is string.
+You can pass additional data (min, max) to validate length of string.
+
+```php
+new \Wame\Validator\Rules\IsString(min: 10, max: 100)
 ```

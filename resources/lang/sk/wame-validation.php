@@ -9,10 +9,12 @@ return [
     "integer" => "Parameter :attribute musí byť integer.",
 
     "min" => [
-        "numeric" => "The :attribute must be at least :min.",
+        "numeric" => "Parameter :attribute musí byť minimálne :min.",
+        "string" => "Parameter :attribute musí mať minimálne :min znakov.",
     ],
 
     "max" => [
-        "numeric" => "The :attribute must not be greater than :max.",
+        "numeric" => "Parameter :attribute môže byť maximálne :max.",
+        "string" => "Parameter :attribute môže mať maximálne :max znakov.",
     ],
 ];

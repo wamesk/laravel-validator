@@ -10,9 +10,11 @@ return [
 
     "min" => [
         "numeric" => "The :attribute must be at least :min.",
+        "string" => "The :attribute must be at least :min characters.",
     ],
 
     "max" => [
         "numeric" => "The :attribute must not be greater than :max.",
+        "string" => "The :attribute must not be greater than :max characters.",
     ],
 ];
