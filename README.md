@@ -166,7 +166,8 @@ This rule validates if entity exists.
 It requires model class in construct.
 Firstly it validates if there is entity with this parameter in database.
 Secondly it checks if it wasn't deleted, if it was it returns validation error.
+You can pass second *(optional)* parameter *column name*.
 
 ```php
-new \Wame\Validator\Rules\Exists(User::class)
+new \Wame\Validator\Rules\Exists(User::class, 'id')
 ```

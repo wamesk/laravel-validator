@@ -9,25 +9,16 @@ use Illuminate\Support\Facades\DB;
 
 class Exists implements InvokableRule
 {
-    /**
-     * @var mixed
-     */
-    protected $model;
-
-    /**
-     * @param $model
-     */
-    public function __construct($model)
-    {
-        $this->model = new $model;
-    }
+    public function __construct(protected $model, protected $column = null) {}
 
     public function __invoke($attribute, $value, $fail)
     {
         $softDeletes = in_array('Illuminate\Database\Eloquent\SoftDeletes', class_uses_recursive(get_class($this->model)), true);
+        $column = $this->column ?? $attribute;
+        
         $entity = match ($softDeletes) {
-            true => $this->model->select('id', 'deleted_at')->withTrashed()->where([$attribute => $value])->first(),
-            false => $this->model->select('id')->where([$attribute => $value])->first(),
+            true => $this->model->select('id', 'deleted_at')->withTrashed()->where([$column => $value])->first(),
+            false => $this->model->select('id')->where([$column => $value])->first(),
         };
 
         if (!$entity) {
