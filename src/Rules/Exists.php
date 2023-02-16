@@ -13,12 +13,13 @@ class Exists implements InvokableRule
 
     public function __invoke($attribute, $value, $fail)
     {
-        $softDeletes = in_array('Illuminate\Database\Eloquent\SoftDeletes', class_uses_recursive(get_class($this->model)), true);
+        $softDeletes = in_array('Illuminate\Database\Eloquent\SoftDeletes', class_uses_recursive($this->model), true);
+        $model = new $this->model;
         $column = $this->column ?? $attribute;
         
         $entity = match ($softDeletes) {
-            true => $this->model->select('id', 'deleted_at')->withTrashed()->where([$column => $value])->first(),
-            false => $this->model->select('id')->where([$column => $value])->first(),
+            true => $model->select('id', 'deleted_at')->withTrashed()->where([$column => $value])->first(),
+            false => $model->select('id')->where([$column => $value])->first(),
         };
 
         if (!$entity) {
