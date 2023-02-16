@@ -7,13 +7,19 @@ return [
     "soft_deleted" => "Enita s týmto parametrom :attribute bola vymazaná",
 
     "integer" => "Parameter :attribute musí byť integer.",
+    "string" => "Parameter :attribute musí byť string.",
+    "array" => "Parameter :attribute musí byť pole.",
 
     "min" => [
+        "array" => "Parameter :attribute musí byť minimálne :min položiek.",
+        "file" => "Parameter :attribute musí byť minimálne :min kilobytov.",
         "numeric" => "Parameter :attribute musí byť minimálne :min.",
         "string" => "Parameter :attribute musí mať minimálne :min znakov.",
     ],
 
     "max" => [
+        "array" => "Parameter :attribute môže byť maximálne :max položiek.",
+        "file" => "Parameter :attribute môže byť maximálne :max kilobytes.",
         "numeric" => "Parameter :attribute môže byť maximálne :max.",
         "string" => "Parameter :attribute môže mať maximálne :max znakov.",
     ],

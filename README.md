@@ -191,3 +191,12 @@ You can pass additional data (min, max) to validate length of string.
 ```php
 new \Wame\Validator\Rules\IsString(min: 10, max: 100)
 ```
+
+### IsArray rule
+
+This rule validates if attribute is array.
+You can pass additional data (min, max) to validate length of array.
+
+```php
+new \Wame\Validator\Rules\IsString(min: 10, max: 100)
+```
