@@ -15,12 +15,13 @@ class IsArray implements InvokableRule
     {
         if (gettype($value) !== 'array') {
             $fail(__('wame-validation.array'));
-        }
-        if (count($value) < $this->min && isset($this->min)) {
-            $fail(__('wame-validation.min.array', ['min' => $this->min]));
-        }
-        if (count($value) > $this->max && isset($this->max)) {
-            $fail(__('wame-validation.max.array', ['max' => $this->max]));
+        } else {
+            if (count($value) < $this->min && isset($this->min)) {
+                $fail(__('wame-validation.min.array', ['min' => $this->min]));
+            }
+            if (count($value) > $this->max && isset($this->max)) {
+                $fail(__('wame-validation.max.array', ['max' => $this->max]));
+            }
         }
     }
 }
