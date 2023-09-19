@@ -201,3 +201,12 @@ You can pass additional data (min, max) to validate length of array.
 ```php
 new \Wame\Validator\Rules\IsString(min: 10, max: 100)
 ```
+
+### IsEmail rule
+
+Validates email format, checks domain existence, and optionally blocks temporary email domains in Laravel.
+You can pass additional data (true, false) to enable some functions.
+
+```php
+new \Wame\Validator\Rules\IsEmail(domainMustExist: false, disableTempMail: false)
+```

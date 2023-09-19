@@ -9,6 +9,7 @@ return [
     "integer" => "The :attribute must be an integer.",
     "string" => "The :attribute must be a string.",
     "array" => "The :attribute must be an array.",
+    "email" => "The :attribute parameter must be email in the correct format.",
 
     "min" => [
         "array" => "The :attribute must have at least :min items.",

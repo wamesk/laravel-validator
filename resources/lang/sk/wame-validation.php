@@ -9,6 +9,14 @@ return [
     "integer" => "Parameter :attribute musí byť integer.",
     "string" => "Parameter :attribute musí byť string.",
     "array" => "Parameter :attribute musí byť pole.",
+    "email" => "Parameter :attribute musí byť email v správnom tvare.",
+
+    "dns" => [
+      "mx" => [
+          "exist" => "Doména :domain nie je platná.",
+          "disabled" => "Doména :domain nie je povolená."
+      ]
+    ],
 
     "min" => [
         "array" => "Parameter :attribute musí byť minimálne :min položiek.",
